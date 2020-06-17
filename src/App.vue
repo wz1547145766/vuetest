@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+
+          {{info}}
+          <router-view/>
+
+          <ol>
+          <HelloWorld v-for="(item, index) in items" :key="index" :item="item"></HelloWorld>
+          </ol>
     </div>
-    <router-view/>
-  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import axios from 'axios'
+import HelloWorld from './components/HelloWorld.vue'
 
-#nav {
-  padding: 30px;
-}
+export default {
+  components:{
+    HelloWorld
+  },
+  data(){
+    return {
+      info:null,
+      items:[
+        "1",
+        "2",
+        "3",
+      ]
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    }
+  },
+  methods:{
+    
+  },
+  computed(){
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  },
+  mounted(){
+      axios.get('/index').then(response => (this.info = response))
+  }
 }
-</style>
+</script>
+
