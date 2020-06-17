@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div >
+    
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped>
+  div{
+    height: 300px;
+    width: 500px;
+    border: blue solid 1px;
+  }
+</style>
