@@ -1,43 +1,28 @@
 <template>
-    <div id="app">
+    <div class="mainBody">
+      <headermenu/>
+      <sidemenu/>
 
-          {{info}}
-          <router-view/>
-
-          <ol>
-          <HelloWorld v-for="(item, index) in items" :key="index" :item="item"></HelloWorld>
-          </ol>
     </div>
+    
 </template>
 
 <script>
-import axios from 'axios'
-import HelloWorld from './components/HelloWorld.vue'
+import sidemenu from './components/sidemenu'
+import headermenu from './components/header'
 
 export default {
   components:{
-    HelloWorld
+    sidemenu,
+    headermenu,
   },
-  data(){
-    return {
-      info:null,
-      items:[
-        "1",
-        "2",
-        "3",
-      ]
-
-    }
-  },
-  methods:{
-    
-  },
-  computed(){
-
-  },
-  mounted(){
-      axios.get('/index').then(response => (this.info = response))
-  }
 }
 </script>
 
+<style>
+   .mainBody{
+     max-width: 1200px;
+     /* position: absolute; */
+     margin: auto;
+   }
+</style>
