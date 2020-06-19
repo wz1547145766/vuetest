@@ -1,14 +1,13 @@
 <template>
-   <div class="header">
-        <img class="headerLogo" :src="logo" alt="">
-        <input class="headerInput" v-model="input" placeholder="请输入内容">
-        <button class="headerButton" type="submit">查询</button>
-        <div class="userform" style="float:right; margin-right:60px;  margin-top: 20px;">
-          <p class="userform">登录</p>
-          <p class="userform">注册</p>
-        </div>
-       
-      </div>
+  <div class="header">
+    <img class="headerLogo" :src="logo" alt="">
+    <input class="headerInput" v-model="input" placeholder="请输入内容">
+    <button class="headerButton" type="submit">查询</button>
+    <div style="float:right; margin-right:40px;  margin-top: 20px;">
+      <p class="userform el-icon-user">注册</p>
+      <p class="userform el-icon-user-solid">登录</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,7 +26,7 @@ export default {
 
 <style>
    input{
-     border: 1px solid #dcdfe6;
+     border: 1px solid #e7e9ee;
    }
     .header{
      height:100px;
@@ -35,7 +34,7 @@ export default {
      position: relative;
      background-color: white;
      box-sizing: border-box;
-     border-bottom: 1px solid gray;
+     border-bottom: 1px solid #e7e9ee;
 
    }
    .headerLogo{
