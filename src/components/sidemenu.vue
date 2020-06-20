@@ -9,7 +9,7 @@
       <span slot="title">天气查询</span>
     </template>
   </el-menu-item>
-  <el-menu-item index="2" style="height:100px; line-height:100px; ">
+  <el-menu-item @click="ajax" index="2" style="height:100px; line-height:100px; ">
     <i class="el-icon-reading"></i>
     <span slot="title">实时新闻</span>
   </el-menu-item>
@@ -32,7 +32,15 @@ export default {
         return{
             isCollapse: false
         }
-    },   
+    }, 
+    methods:{
+      // ajax : axios.create({
+      //   baseURL: 'http://127.0.0.1:8080/router'
+      // })
+      ajax: function(){
+        alert("click")
+      }
+    } 
 }
 </script>
 

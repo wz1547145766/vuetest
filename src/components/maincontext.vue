@@ -6,9 +6,10 @@
         </div>
         <div class="sevenweather">
             <ul>
-                <li v-for="(item, index) in seven" :key="index" v-html="item.imgsrc">
-                    {{item.wind}}
-                    <div>{{item.imgsrc}}</div>
+                <li v-for="(item, index) in seven" :key="index">
+                    <div>{{item.date}}</div>
+                    <div>{{item.wind}}</div>
+                    <div class="icons" v-html="item.imgsrc">{{item.imgsrc}}</div>
                     <div>{{item.temp}}</div>
                 </li>
             </ul>
@@ -25,13 +26,13 @@ export default {
             weather:"晴",
             aa:'<i class=\"el-icon-sunny\"></i>',
             seven:[
-                {temp:"12", wind:"东三级", imgsrc:"<p class=\"el-icon-sunny\"></p>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
-                {temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
+                {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
             ]
         }
     }
@@ -76,24 +77,34 @@ export default {
     .sevenweather{
         max-width: 700px;
         height: 400px;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         position: relative;
         left:297px;
         bottom: 270px;
+        text-align: center;
 
     }
     .sevenweather ul{
-        /* position: relative; */
+        position: relative;
+        width: 600px;
         padding: 0px;
         display: table;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 80px;
     }
     .sevenweather li{
-        width: 50px;
+        white-space:nowrap; 
+        width: 80px;
         float: left;
         text-align: center;
         /* margin-left: 30px; */
+    }
+    .sevenweather li div{
+        margin-top: 30px;
+    }
+    .icons{
+        font-size: 30px;
     }
 </style>
 

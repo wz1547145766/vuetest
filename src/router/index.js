@@ -1,10 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import maincontext from '@/components/maincontext'
+import sidemenu from '@/components/sidemenu'
 
 
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '/',
+      name :'maincontext',
+      component: maincontext
+    },
+    {
+      path: '/router',
+      name :'maincontext',
+      component: sidemenu
+    }
   // {
   //   path: '/',
   //   name: 'Home',

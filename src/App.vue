@@ -2,7 +2,7 @@
     <div class="mainBody">
       <headermenu/>
       <sidemenu/>
-      <maincontext/>
+      <router-view/>
 
     </div>
     
@@ -11,13 +11,12 @@
 <script>
 import sidemenu from './components/sidemenu'
 import headermenu from './components/header'
-import maincontext from './components/maincontext'
+import axios from 'axios'
 
 export default {
   components:{
     sidemenu,
     headermenu,
-    maincontext
   },
 }
 </script>
