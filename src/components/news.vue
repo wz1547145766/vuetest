@@ -1,6 +1,6 @@
 <template>
     <div class="mainContext">
- 
+        <p>new views</p>
     </div>    
 </template>
 

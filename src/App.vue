@@ -2,8 +2,7 @@
     <div class="mainBody">
       <headermenu/>
       <sidemenu/>
-      <!-- <router-view/> -->
-      <news/>
+      <router-view/>
     </div>
     
 </template>

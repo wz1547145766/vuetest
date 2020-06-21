@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import maincontext from '@/components/maincontext'
 import sidemenu from '@/components/sidemenu'
+import news from '@/components/news'
+import login from '@/components/login'
+import reg from '@/components/reg'
 
 
 Vue.use(VueRouter)
@@ -13,10 +16,20 @@ Vue.use(VueRouter)
       component: maincontext
     },
     {
-      path: '/router',
-      name :'maincontext',
-      component: sidemenu
-    }
+      path: '/news',
+      name :'news',
+      component: news
+    },
+    {
+      path: '/login',
+      name :'login',
+      component:login
+    },
+    {
+      path: '/reg',
+      name :'reg',
+      component:reg
+    },
   // {
   //   path: '/',
   //   name: 'Home',

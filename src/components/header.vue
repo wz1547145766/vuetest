@@ -4,8 +4,12 @@
     <input class="headerInput" v-model="input" placeholder="请输入内容">
     <button class="headerButton" type="submit">查询</button>
     <div style="float:right; margin-right:40px;  margin-top: 20px;">
+      <router-link :to="{ path: '/reg' }">
       <p class="userform el-icon-user">注册</p>
+      </router-link>
+      <router-link :to="{ path: '/login' }">
       <p class="userform el-icon-user-solid">登录</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -25,6 +29,11 @@ export default {
 </script>
 
 <style>
+   a:link{color:black;}
+   a:visited{color:black;}
+   a{
+     text-decoration:none;
+   }
    input{
      border: 1px solid #e7e9ee;
    }
