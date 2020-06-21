@@ -2,21 +2,23 @@
     <div class="mainBody">
       <headermenu/>
       <sidemenu/>
-      <router-view/>
-
+      <!-- <router-view/> -->
+      <news/>
     </div>
     
 </template>
 
 <script>
+import axios from 'axios'
 import sidemenu from './components/sidemenu'
 import headermenu from './components/header'
-import axios from 'axios'
+import news from './components/news'
 
 export default {
   components:{
     sidemenu,
     headermenu,
+    news,
   },
 }
 </script>
