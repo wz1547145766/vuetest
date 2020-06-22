@@ -24,7 +24,6 @@ export default {
     data(){
         return{
             weather:"晴",
-            aa:'<i class=\"el-icon-sunny\"></i>',
             seven:[
                 {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
                 {date:"五月十日",temp:"12", wind:"东三级", imgsrc:"<i class=\"el-icon-sunny\"></i>"},
